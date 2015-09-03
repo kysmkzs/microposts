@@ -1,0 +1,16 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+        <%= render 'shared/user_info' %>
+        <p class="stats"><%= render 'shared/stats' %></p>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3>Followers (<%= @user.follower_relationships.count %>)</h3>
+    <% if @followed.any? %>
+      <ul class="followers">
+        <%= render 'shared/user_followers' %>
+      </ul>
+    <% end %>
+  </div>
+</div>
