@@ -53,8 +53,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :profile, :area, :web, :bd, :password,
                                  :password_confirmation, :image)
-    attr = params.require(:user).permit(:name, :email)
-  　@user = User.new(attr)
   end
 
 end
